@@ -7,9 +7,9 @@ module.exports = {
     list: [
       {
         id: 10240,
-        username: 'tgramxs',
+        username: 'ylc',
         password: '123456',
-        chineseName: '销售部',
+        chineseName: '叶良辰',
         idcardNo: '332527198010230505',
         deptCode: '370200000000',
         phoneNo: '18969784568',
@@ -25,9 +25,9 @@ module.exports = {
       },
       {
         id: 10198,
-        username: 'qingdaosj',
+        username: 'zrt',
         password: '888888',
-        chineseName: '市局',
+        chineseName: '赵日天',
         idcardNo: '412722196302151222',
         deptCode: '370200000000',
         phoneNo: '15236985623',
@@ -43,9 +43,9 @@ module.exports = {
       },
       {
         id: 10184,
-        username: 'sjsjsj',
+        username: 'lat',
         password: '888888',
-        chineseName: '测试sj',
+        chineseName: '龙傲天',
         idcardNo: '332623196801254521',
         deptCode: '370200000000',
         phoneNo: '15821456854',
@@ -62,9 +62,9 @@ module.exports = {
       },
       {
         id: 10180,
-        username: 'sj666',
+        username: 'fek',
         password: '888888',
-        chineseName: 'sj-admin',
+        chineseName: '福尔康',
         idcardNo: '612527199310150000',
         deptCode: '370200000000',
         phoneNo: '15522223333',

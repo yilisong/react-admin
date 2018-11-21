@@ -40,7 +40,7 @@ export default class app extends Component {
   componentDidMount() {
     // this.dom = ReactDOM.findDOMNode(this)
     this.dom = this.componentDom
-    this.createPointData();
+    // this.createPointData();
   }
 
   componentWillUnmount() {
@@ -107,74 +107,74 @@ export default class app extends Component {
     });
   }
 
-  createPointData = () => {
-    const { w, h } = this.props;
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, w, h);
-    canvas.width = this.props.w;
-    canvas.height = h;
-    const img = new Image();
-    img.onload = () => {
-      ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, w, h);
-      const { data } = ctx.getImageData(0, 0, w, h);
-      this.setDataToDom(data, w, h);
-      this.dom.removeChild(canvas);
-    };
-    img.crossOrigin = 'anonymous';
-    img.src = this.props.image;
-  };
+  // createPointData = () => {
+  //   const { w, h } = this.props;
+  //   const canvas = document.getElementById('canvas');
+  //   const ctx = canvas.getContext('2d');
+  //   ctx.clearRect(0, 0, w, h);
+  //   canvas.width = this.props.w;
+  //   canvas.height = h;
+  //   const img = new Image();
+  //   img.onload = () => {
+  //     ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, w, h);
+  //     const { data } = ctx.getImageData(0, 0, w, h);
+  //     this.setDataToDom(data, w, h);
+  //     this.dom.removeChild(canvas);
+  //   };
+  //   img.crossOrigin = 'anonymous';
+  //   img.src = this.props.image;
+  // };
 
-  gatherData = () => {
-    const children = this.state.children && this.state.children.map(item =>
-      React.cloneElement(item, {
-        animation: {
-          x: 0,
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          delay: Math.random() * 500,
-          duration: 800,
-          ease: 'easeInOutQuint',
-        },
-      }));
-    this.setState({ children });
-  };
+  // gatherData = () => {
+  //   const children = this.state.children && this.state.children.map(item =>
+  //     React.cloneElement(item, {
+  //       animation: {
+  //         x: 0,
+  //         y: 0,
+  //         opacity: 1,
+  //         scale: 1,
+  //         delay: Math.random() * 500,
+  //         duration: 800,
+  //         ease: 'easeInOutQuint',
+  //       },
+  //     }));
+  //   this.setState({ children });
+  // };
 
-  disperseData = () => {
-    const rect = this.dom.getBoundingClientRect();
-    const sideRect = this.sideBox.getBoundingClientRect();
-    const sideTop = sideRect.top - rect.top;
-    const sideLeft = sideRect.left - rect.left;
-    const children = this.state.children.map(item =>
-      React.cloneElement(item, {
-        animation: {
-          x: (Math.random() * rect.width) - sideLeft - item.props.style.left,
-          y: (Math.random() * rect.height) - sideTop - item.props.style.top,
-          opacity: (Math.random() * 0.4) + 0.1,
-          scale: (Math.random() * 2.4) + 0.1,
-          duration: (Math.random() * 500) + 500,
-          ease: 'easeInOutQuint',
-        },
-      }));
+  // disperseData = () => {
+  //   const rect = this.dom.getBoundingClientRect();
+  //   const sideRect = this.sideBox.getBoundingClientRect();
+  //   const sideTop = sideRect.top - rect.top;
+  //   const sideLeft = sideRect.left - rect.left;
+  //   const children = this.state.children.map(item =>
+  //     React.cloneElement(item, {
+  //       animation: {
+  //         x: (Math.random() * rect.width) - sideLeft - item.props.style.left,
+  //         y: (Math.random() * rect.height) - sideTop - item.props.style.top,
+  //         opacity: (Math.random() * 0.4) + 0.1,
+  //         scale: (Math.random() * 2.4) + 0.1,
+  //         duration: (Math.random() * 500) + 500,
+  //         ease: 'easeInOutQuint',
+  //       },
+  //     }));
 
-    this.setState({
-      children,
-    });
-  };
+  //   this.setState({
+  //     children,
+  //   });
+  // };
 
   updateTweenData = () => {
     // this.dom = ReactDOM.findDOMNode(this);
     this.dom = this.componentDom
     // this.sideBox = ReactDOM.findDOMNode(this.sideBoxComp);
     this.sideBox = document.querySelector('.right-side');
-    ((this.gather && this.disperseData) || this.gatherData)();
+    // ((this.gather && this.disperseData) || this.gatherData)();
     this.gather = !this.gather;
   };
 
   render() {
     return (<div className="logo-gather-demo-wrapper" ref={c => this.componentDom = c}>
-      <canvas id="canvas" />
+      {/* <canvas id="canvas" /> */}
       <TweenOne
         animation={this.state.boxAnim}
         className="right-side blur"

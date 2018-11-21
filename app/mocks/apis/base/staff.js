@@ -23,7 +23,7 @@ module.exports = {
         resources: [],
       },
     ],
-    deptName: '杭州市',
+    deptName: '福州市交警支队',
     ticket: '.2XxGlEuidOmAoYIdSo6pQIlGbQSh83U7p4eJsoTO-70',
     gxdwdm: '370200000000',
     deptLevel: '1',
