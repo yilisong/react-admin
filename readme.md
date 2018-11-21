@@ -10,7 +10,7 @@ react@16.5.2 + redux@3.7.2 + react-router@3.2.0 + webpack@3.10.0 + axios@0.18.0 
 
 
 ```
-git clone --depth 1 https://github.com/duxianwei520/react.git  
+git clone --depth 1 https://github.com/yilisong/react-admin.git  
 
 cd react 
 
@@ -56,13 +56,13 @@ npm run build (打包，部署)
 这个react的项目我有在跟nodejs的express框架配合做接口的开发，可以不靠后端输出数据库真实的数据，仓库地址在
 
 ```
-https://github.com/duxianwei520/express
+https://github.com/yilisong/express
 
 ```
 还有一个原生的nodejs版本的，仓库库地址是
 
 ```
-https://github.com/duxianwei520/node
+https://github.com/yilisong/node
 
 ```
 基本功能差不多，目前实现了注册登录以及获取用户信息等3个接口的真实api
@@ -72,7 +72,7 @@ https://github.com/duxianwei520/node
 
 ## 说明
 
->  开发环境 win10  Chrome 63.0.3239.132（正式版本） （32 位） nodejs 8.7.0
+>  开发环境 win10  Chrome 63.0.3239.132（正式版本） （32 位 || 64 位） nodejs 8.7.0
 
 >  如果npm install太慢导致有些npm依赖包下载失败 你可以看控制台的报错信息，再手动npm install 具体的开发包，推荐使用淘宝的注册源，直接运行，
 
