@@ -1,10 +1,10 @@
 {
   "name": "react-admin",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "description": "a react develop stack for pc management system",
   "repository": {
     "type": "git",
-    "url": "https://github.com/duxianwei520/react"
+    "url": "https://github.com/yilisong/react"
   },
   "private": true,
   "scripts": {
@@ -23,15 +23,6 @@
       "pre-commit": "lint-staged"
     }
   },
-  "author": "duxianwei",
-  "contributors": [
-    {
-      "name": "HanQ"
-    },
-    {
-      "name": "Huxiaoyu"
-    }
-  ],
   "devDependencies": {
     "babel-core": "~6.26.0",
     "babel-eslint": "~8.2.1",
